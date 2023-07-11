@@ -11,7 +11,7 @@ class test_theme{
 		return self::$instance;
 	}
 	private function init(){
-		$this->version = wp_get_theme()->get('Version') . rand();
+		$this->version = wp_get_theme()->get('Version');
 		$this->text_domain = wp_get_theme()->get('TextDomain');
 		add_action('wp_enqueue_scripts', array($this, 'scripts'));
 		add_action('admin_enqueue_scripts', array($this, 'scripts'));

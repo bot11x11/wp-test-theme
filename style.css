@@ -139,6 +139,7 @@ a.btn:hover{
 }
 .calculator input,
 .calculator select{
+	background: var(--bg-white);
 	width: 30%;
 	float: left;
 	border: 1px solid #000;

@@ -103,7 +103,7 @@
 	transform: translate(50%, -50%);
 	border-top: solid 1.5px #292D32;
 }
-.acf-accordion-item input:checked+.acf-accordion-label:after{
+.acf-accordion-item input:not(:checked)+.acf-accordion-label:after{
 	content: "";
 	position: absolute;
 	height: 24px;
