@@ -1,0 +1,114 @@
+﻿.acf-accordion-outer{
+	--first-column-width: 100%;
+	--last-column-width: 100%;
+	--padding-top: 47px;
+	--padding-bottom: 44px;
+	--last-column-margin: 28px 0 0;
+}
+.acf-accordion-title{
+	--margin: 9px 0 34px;
+}
+.acf-accordion-item{
+	--padding: 15px 0 12px 0;
+	--margin: 15px 0;
+}
+@media (min-width: 768px){
+	.acf-accordion-outer{
+		--first-column-width: 42%;
+		--last-column-width: 58%;
+		--padding-top: 108px;
+		--padding-bottom: 80px;
+		--last-column-margin: 20px 0 0;
+	}
+	.acf-accordion-title{
+		--margin: 6px 0 47px;
+	}
+	.acf-accordion-item{
+		--padding: 15px 0 20px 0;
+		--margin: 13px 0 19px;
+	}
+}
+.acf-accordion-outer{
+	background: var(--bg-gray);
+}
+.acf-accordion-inner{
+	display: flex;
+	flex-wrap: wrap;
+	max-width: var(--max-width);
+	padding: var(--padding);
+	padding-top: var(--padding-top);
+	padding-bottom: var(--padding-bottom);
+	margin: var(--margin);
+}
+.acf-accordion-info{
+	width: var(--first-column-width);
+}
+.acf-accordion{
+	width: var(--last-column-width);
+	padding: 0;
+	margin: var(--last-column-margin);
+	list-style: none;
+}
+.acf-accordion-sub-title{
+	font-size: var(--small-font-size);
+	color: var(--text-gray);
+}
+.acf-accordion-title{
+	font-size: var(--header2-font-size);
+	font-weight: var(--header2-font-weight);
+	line-height: var(--header2-line-height);
+	margin: var(--margin);
+}
+.acf-accordion-item{
+	border-bottom: 1px solid #EEE;
+	padding: var(--padding);
+}
+.acf-accordion-label{
+	font-size: var(--header4-font-size);
+	font-weight: var(--header4-font-weight);
+	line-height: var(--header4-line-height);
+	color: var(--text-gray);
+	cursor: pointer;
+	position: relative;
+	padding-right: 30px;
+	display: block;
+	transition: .3s;
+}
+.acf-accordion-item input{
+	display: none;
+}
+.acf-accordion-item input:checked+.acf-accordion-label,
+.acf-accordion-label:hover{
+	color: var(--text-color);
+}
+.acf-accordion-text{
+	overflow: hidden;
+	max-height: 0;
+	opacity: 0;
+	transition: .3s;
+}
+.acf-accordion-item input:checked~.acf-accordion-text{
+	max-height: 1000px;
+	opacity: 1;
+}
+.acf-accordion-text p{
+	margin: var(--margin);
+}
+.acf-accordion-label:before{
+	content: "";
+	position: absolute;
+	width: 24px;
+	top: 50%;
+	right: 12px;
+	transform: translate(50%, -50%);
+	border-top: solid 1.5px #292D32;
+}
+.acf-accordion-item input:checked+.acf-accordion-label:after{
+	content: "";
+	position: absolute;
+	height: 24px;
+	top: 50%;
+	right: 12px;
+	transform: translate(50%, -50%);
+	border-right: solid 1.5px #292D32;
+}
